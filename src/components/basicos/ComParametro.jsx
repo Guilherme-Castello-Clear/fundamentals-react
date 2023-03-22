@@ -12,7 +12,6 @@ export default function ComParametros(props){
                 <strong> {nota} </strong>
                 e foi
                 <strong> {status}</strong>
-
             </p>
 
         </div>
