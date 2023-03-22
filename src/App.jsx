@@ -8,6 +8,8 @@ import Card from './components/layout/Card'
 import Familia from './components/basicos/Familia';
 import FamiliaMembro from './components/basicos/FamiliaMembro';
 import ListaAlunos from './components/repeticao/ListaAlunos'
+import TabelaProdutos from './components/repeticao/TabelaProdutos'
+
 
 
 import './App.css'
@@ -16,7 +18,11 @@ export default _ =>
     <div className='App'>
         <h1>Fundamentos React</h1>
         <div className='Cards'>
-            
+
+            <Card title='#7- Tabela' color='#546E7A'>
+                <TabelaProdutos></TabelaProdutos>
+            </Card>
+
             <Card title='#6- Repetição' color='#DD2C00'>
                 <ListaAlunos></ListaAlunos>
             </Card>
