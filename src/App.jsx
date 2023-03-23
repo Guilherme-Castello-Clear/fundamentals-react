@@ -12,7 +12,8 @@ import TabelaProdutos from './components/repeticao/TabelaProdutos'
 import ParOuImpar from './components/condicional/ParOuImpar'
 import If from './components/condicional/If'
 import UsuarioInfo from './components/condicional/UsuarioInfo'
-
+import DiretaPai from './components/comunicacao/DiretaPai'
+import IndiretaPai from './components/comunicacao/IndiretaPai.jsx'
 import './App.css'
 
 export default _ =>
@@ -20,6 +21,14 @@ export default _ =>
         <h1>Fundamentos React</h1>
         <div className='Cards'>
 
+
+            <Card title='#10- Comunicação Indireta' color='#1B2631'>
+                <IndiretaPai></IndiretaPai>
+            </Card>
+
+            <Card title='#9- Comunicação Direta' color='#1B2631'>
+                <DiretaPai></DiretaPai>
+            </Card>
 
             <Card title='#8- Renderização Condicional' color='#D4AC0D'>
                 <ParOuImpar numero={<RandomNum min={3} max={10}/>}></ParOuImpar>
