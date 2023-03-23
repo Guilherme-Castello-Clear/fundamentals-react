@@ -9,8 +9,9 @@ import Familia from './components/basicos/Familia';
 import FamiliaMembro from './components/basicos/FamiliaMembro';
 import ListaAlunos from './components/repeticao/ListaAlunos'
 import TabelaProdutos from './components/repeticao/TabelaProdutos'
-
-
+import ParOuImpar from './components/condicional/ParOuImpar'
+import If from './components/condicional/If'
+import UsuarioInfo from './components/condicional/UsuarioInfo'
 
 import './App.css'
 
@@ -18,6 +19,15 @@ export default _ =>
     <div className='App'>
         <h1>Fundamentos React</h1>
         <div className='Cards'>
+
+
+            <Card title='#8- Renderização Condicional' color='#D4AC0D'>
+                <ParOuImpar numero={<RandomNum min={3} max={10}/>}></ParOuImpar>
+                <If test={1+1 == 3}>
+                    <span>Afirmativo</span>
+                </If>
+                <UsuarioInfo usuario={{name: 'Iago Barreto'}}></UsuarioInfo>
+            </Card>
 
             <Card title='#7- Tabela' color='#546E7A'>
                 <TabelaProdutos></TabelaProdutos>
