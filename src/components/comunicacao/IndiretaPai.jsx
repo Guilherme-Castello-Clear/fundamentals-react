@@ -3,7 +3,7 @@ import IndiretaFilho from './IndiretaFilho'
 
 
 export default props => {
-    const [a, b] = [1, 2]
+    
     const [name, setName] = useState('?')
     const [idd, setIdd] = useState(0)
     const [nerd, setNerd] = useState(false)
