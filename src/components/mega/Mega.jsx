@@ -12,25 +12,7 @@ export default props => {
     var [megaGenLuck = [], setLuck] = useState([]);
     var [checkResult, setCheck] = useState(0);
 
-
-    const showLuckNum = megaGenLuck.map(num => {
-        return <span key={num}>{num}, </span>
-    })
-
-    const showResultNum = megaGenResult.map(num => {
-        return <span key={num}>{num}, </span>
-        
-    })
-
     function getResult(num){
-
-        for(let i = 0; i < 7; i++){
-            if(num[i] < num[i + 1]){
-                let aux = num[i]
-                num[i] = num[i+1]
-                num[i+1] = aux
-            }
-        }
 
         setResult(num);
     }
@@ -44,7 +26,7 @@ export default props => {
     }
 
     
-    const genTable = megaGenLuck.map((m, i) => {
+    const genTable = megaGenResult.map((m, i) => {
             return <tr key={i}><td>{megaGenResult[i]}</td><td>{megaGenLuck[i]}</td></tr>
     })
     
@@ -65,9 +47,6 @@ export default props => {
             <GenResultNum resultNum={getResult}></GenResultNum>
             <GenLuckNum luckNum={getLuck}/>
             <CheckResult check={getCheck} megaResult={megaGenResult} megaLuck={megaGenLuck}></CheckResult>
-
-
-
         </>
     )    
 }
